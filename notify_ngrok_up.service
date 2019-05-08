@@ -1,0 +1,14 @@
+[Unit]
+Description=notify_ngrok_up
+After=ngrok.target
+
+[Service]
+ExecStart=/opt/ngrok/notify_ngrok_up.py
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+IgnoreSIGPIPE=true
+Type=simple
+EnvironmentFile=/opt/ngrok/env.sh
+
+[Install]
+WantedBy=multi-user.target

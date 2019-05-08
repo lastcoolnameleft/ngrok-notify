@@ -1,0 +1,7 @@
+{
+    "sync-rsync.local": "/Users/thfalgou/git/lastcoolnameleft/ngrok-bootup-twilio/",
+    "sync-rsync.remote": "pi@rpi-zerow:/home/pi/git/ngrok-bootup-twilio/",
+    "sync-rsync.onSave": true,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.linting.pylintEnabled": true
+}

@@ -1,0 +1,7 @@
+authtoken: YOUR_AUTH_TOKEN_HERE
+log_level: debug
+log: /tmp/ngrok.log
+tunnels:
+  ssh:
+    proto: tcp
+    addr: 22
