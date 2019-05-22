@@ -1,5 +1,7 @@
 # ngrok-bootup-twilio
-Notification for ngrok bootup using twilio
+Notification for ngrok bootup using twilio.  
+
+I created this project for my traveling RaspberryPi project so that I could have a publicly available SSH port for your RaspberryPi, when you didn't know the SSID.
 
 ## Installation
 
