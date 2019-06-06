@@ -23,6 +23,7 @@ def send_message():
     [hostname, port] = ssh_public_url.split('tcp://')[1].split(':')
     body = "Your RPi ZeroW is ready: ssh pi@" + hostname + " -p " + port + " Other Endpoints: " + other_public_urls
 
+    print('Sending: ' + body)
     client = Client(account_sid, auth_token)
     message = client.messages.create(body=body, from_=from_phone_no, to=to_phone_no)
     print(message.sid)

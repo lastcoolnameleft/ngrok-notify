@@ -14,6 +14,6 @@ cp env.sh /opt/ngrok
 cp ngrok_notify.py /opt/ngrok
 
 systemctl enable ngrok.service
-systemctl start ngrok.service
+systemctl restart ngrok.service
 systemctl enable ngrok_notify.service
-systemctl start ngrok_notify.service
+systemctl restart ngrok_notify.service
