@@ -6,14 +6,14 @@ if (( $EUID != 0 )); then
 fi
 
 cp ngrok.service /lib/systemd/system/
-cp notify_ngrok_up.service /lib/systemd/system/
+cp ngrok_notify.service /lib/systemd/system/
 
 mkdir -p /opt/ngrok
 cp ngrok.yaml /opt/ngrok
 cp env.sh /opt/ngrok
-cp notify_ngrok_up.py /opt/ngrok
+cp ngrok_notify.py /opt/ngrok
 
 systemctl enable ngrok.service
 systemctl start ngrok.service
-systemctl enable notify_ngrok_up.service
-systemctl start notify_ngrok_up.service
+systemctl enable ngrok_notify.service
+systemctl start ngrok_notify.service
