@@ -32,11 +32,11 @@ Should see something like:
 ```
 
 To validate the notify service is working as expected, start it:
-`sudo service ngrok_notify start`
+`sudo service ngrok-notify start`
 
 ## Debugging
 
 Use these two commands to view the logs from the systemd service that was installed:
 
 `journalctl --unit ngrok`
-`journalctl --unit ngrok_notify`
+`journalctl --unit ngrok-notify`
