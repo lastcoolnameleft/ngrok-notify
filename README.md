@@ -5,18 +5,28 @@ I created this project for my traveling RaspberryPi project so that I could have
 
 ## Installation
 
-* Install ngrok
-  * https://ngrok.com/download
-  * `wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip`
-  * `unzip ngrok-stable-linux-arm.zip`
-  * `sudo mkdir /opt/ngrok`
-  * `sudo mv /usr/local/bin/ngrok /opt/ngrok/ngrok`
-* Install Python Repo
-  * Clone repo (`git clone https://github.com/lastcoolnameleft/ngrok-bootup-twilio.git`)
-  * `cd ngrok-bootup-twilio`
-  * Create actual `env.sh` and `ngrok.yaml` files from the respective template files
-  * `sudo pip3 install -r requirements.txt`
-  * `sudo ./install.sh`
+1. Install ngrok
+
+To download on a RaspberryPi, follow steps below.  Otherwise, download via https://ngrok.com/download and copy to `/opt/ngrok` directory.
+
+```shell
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+unzip ngrok-stable-linux-arm.zip
+sudo mkdir /opt/ngrok
+sudo mv ngrok /opt/ngrok/ngrok
+```
+
+2. Install ngrok-notify
+
+```
+git clone https://github.com/lastcoolnameleft/ngrok-bootup-twilio.git
+cd ngrok-bootup-twilio
+cp env.sh.template env.sh
+cp ngrok.yaml.template ngrok.yaml
+# Modify env.sh and ngrok.yaml with relevant values
+sudo pip3 install -r requirements.txt
+sudo ./install.sh
+```
 
 ## Validation
 

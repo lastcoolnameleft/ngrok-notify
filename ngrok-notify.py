@@ -20,8 +20,9 @@ def send_message():
     # splitting because python regex sucks
     # Assuming it looks like this:  'tcp://0.tcp.ngrok.io:19091'
     print('Parsing ' + ssh_public_url)
-    [hostname, port] = ssh_public_url.split('tcp://')[1].split(':')
-    body = "Your RPi ZeroW is ready: ssh pi@" + hostname + " -p " + port + " Other Endpoints: " + other_public_urls
+    [ngrok_hostname, port] = ssh_public_url.split('tcp://')[1].split(':')
+    hostname = os.uname().nodename
+    body = hostname + " is ready: ssh pi@" + ngrok_hostname + " -p " + port + " Other Endpoints: " + other_public_urls
 
     print('Sending: ' + body)
     client = Client(account_sid, auth_token)
