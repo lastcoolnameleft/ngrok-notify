@@ -1,9 +1,9 @@
 [Unit]
-Description=ngrok_notify
+Description=ngrok-notify
 After=ngrok.target
 
 [Service]
-ExecStart=/opt/ngrok/ngrok_notify.py
+ExecStart=/opt/ngrok/ngrok-notify.py
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 IgnoreSIGPIPE=true

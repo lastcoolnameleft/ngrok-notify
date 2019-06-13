@@ -22,7 +22,9 @@ def send_message():
     print('Parsing ' + ssh_public_url)
     [ngrok_hostname, port] = ssh_public_url.split('tcp://')[1].split(':')
     hostname = os.uname().nodename
-    body = hostname + " is ready: ssh pi@" + ngrok_hostname + " -p " + port + " Other Endpoints: " + other_public_urls
+    body = hostname + " is ready: ssh pi@" + ngrok_hostname + " -p " + port
+    if other_public_urls:
+        body += " Other Endpoints: " + other_public_urls
 
     print('Sending: ' + body)
     client = Client(account_sid, auth_token)

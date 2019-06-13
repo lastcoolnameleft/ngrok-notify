@@ -19,8 +19,8 @@ sudo mv ngrok /opt/ngrok/ngrok
 2. Install ngrok-notify
 
 ```
-git clone https://github.com/lastcoolnameleft/ngrok-bootup-twilio.git
-cd ngrok-bootup-twilio
+git clone https://github.com/lastcoolnameleft/ngrok-notify.git
+cd ngrok-notify
 cp env.sh.template env.sh
 cp ngrok.yaml.template ngrok.yaml
 # Modify env.sh and ngrok.yaml with relevant values
