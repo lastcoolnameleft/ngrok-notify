@@ -49,4 +49,5 @@ To validate the notify service is working as expected, start it:
 Use these two commands to view the logs from the systemd service that was installed:
 
 `journalctl --unit ngrok`
+
 `journalctl --unit ngrok-notify`
