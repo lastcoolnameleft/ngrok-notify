@@ -1,0 +1,17 @@
+server_addr: control.ngrok.lastcoolnameleft.com:4443
+trust_host_root_certs: true
+log_level: debug
+log: /tmp/ngrok.log
+tunnels:
+  ssh:
+    proto:
+      tcp: 22
+    subdomain: ssh-rpi0w-1
+  ui:
+    proto:
+      https: 80
+    subdomain: ui-rpi0w-1
+  bot:
+    proto:
+      https: 80
+    subdomain: bot-rpi0w-1
