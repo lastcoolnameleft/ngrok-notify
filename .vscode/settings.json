@@ -1,6 +1,6 @@
 {
     "sync-rsync.local": "/Users/thfalgou/git/lastcoolnameleft/ngrok-notify/",
-    "sync-rsync.remote": "pi@lanyard.local:/home/pi/git/ngrok-notify/",
+    "sync-rsync.remote": "pi@baiiab2:/home/pi/ngrok-notify/",
     "sync-rsync.onSave": true,
     "python.pythonPath": "/usr/local/bin/python3",
     "python.linting.pylintEnabled": true

@@ -3,7 +3,9 @@ Description=ngrok-notify
 After=ngrok.target
 
 [Service]
-ExecStart=/opt/ngrok/ngrok-notify.py
+User=pi
+Group=pi
+ExecStart=/usr/bin/python /home/pi/ngrok-notify/ngrok-notify.py
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 IgnoreSIGPIPE=true

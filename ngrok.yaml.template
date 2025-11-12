@@ -1,4 +1,5 @@
-authtoken: YOUR_AUTH_TOKEN_HERE
+version: "2"
+authtoken: <AUTH YOUR_AUTH_TOKEN_HERE>
 log_level: debug
 log: /tmp/ngrok.log
 tunnels:

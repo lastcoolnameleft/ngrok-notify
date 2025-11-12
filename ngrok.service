@@ -2,14 +2,19 @@
 Description=ngrok
 After=network-online.target
 Wants=network-online.target
+ConditionFileIsExecutable=/usr/local/bin/ngrok
 
 [Service]
-ExecStart=/opt/ngrok/ngrok start --all --config /opt/ngrok/ngrok.yaml
+User=pi
+Group=pi
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/usr/local/bin/ngrok start --all --config /home/pi/ngrok-notify/ngrok.yaml
 ExecReload=/bin/kill -HUP $MAINPID
-KillMode=process
-IgnoreSIGPIPE=true
 Restart=always
-RestartSec=3
+RestartSec=15
+EnvironmentFile=-/etc/sysconfig/ngrok
+KillMode=process
 Type=simple
 
 [Install]
